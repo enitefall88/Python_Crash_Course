@@ -30,11 +30,17 @@ class Admin(User):
         self.login_attempts = login_attempts
         self.password = password
         super().__init__(first_name, last_name, email, username, login_attempts, password)
-        self.privileges = ["can add post", "can delete post", "can ban user"]
 
+        self.privileges = Privileges()
+
+
+class Privileges:
+    def __init__(self, privileges=["can add post", "can delete post", "can ban user"]):
+        self.privileges = privileges
     def show_privileges(self):
         for privilege in self.privileges:
             print(privilege)
 
 vasya =  Admin('Vasya', 'Bikov', 'vasya@google.com', 'vasyabik', 2, 'secret')
-vasya.show_privileges()
+
+vasya.privileges.show_privileges()
