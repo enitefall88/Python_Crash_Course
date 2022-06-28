@@ -11,15 +11,22 @@ result = ''
 for line in lines:
     result += line.strip()
 
-birthday = '13'
-counter = 0
+birthday = '121033'
 
-def find_birthday():
+
+def find_birthday_occurrences(number):
     counter = 0
-    if birthday in result:
-        print('yey')
-        counter += 1
+    flag = True
+    if flag:
+        if number in result:
+            flag = True
+            print('yey')
+            print(number)
+            counter += 1
+        else:
+            flag = False
+
     return counter
 
-print(find_birthday())
+print(find_birthday_occurrences(birthday))
 
