@@ -17,7 +17,7 @@ birthday = '121033'
 def find_birthday_occurrences(number):
     counter = 0
     flag = True
-    if flag:
+    while flag:
         if number in result:
             flag = True
             print('yey')
