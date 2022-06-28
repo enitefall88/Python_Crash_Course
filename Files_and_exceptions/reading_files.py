@@ -11,13 +11,15 @@ result = ''
 for line in lines:
     result += line.strip()
 
-birthday = '121101213'
+birthday = '13'
 counter = 0
 
-if birthday in result:
-    print('yey')
-    counter += 1
+def find_birthday():
+    counter = 0
+    if birthday in result:
+        print('yey')
+        counter += 1
+    return counter
 
-
-print(counter)
+print(find_birthday())
 
