@@ -2,20 +2,23 @@ import sys
 
 
 def addition():
-    number1 = input('enter the first number')
-    try:
-        number1 = int(number1)
-    except: ValueError
-    print(f"{number1} is not a number")
-    sys.exit(1)
 
-    number2 = input('enter the second number')
-    try:
-        number2 = int(number2)
-    except ValueError:
-        print(f"{number2} is not a number")
-    else:
-        return print(number1 * number2)
+    while True:
+        try:
+            x = input("Give me a number: or 'q' to quit ")
+            if x == 'q':
+               break
+            x = int(x)
+
+            y = input("Give me a number: or 'q' to quit ")
+            if y == 'q':
+                break
+            y = int(y)
+        except ValueError:
+            print("Sorry, I really needed a number.")
+        else:
+            sum = x + y
+            print(f"The sum of {x} and {y} is {sum}.")
 
 addition()
 
