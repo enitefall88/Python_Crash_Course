@@ -24,7 +24,11 @@ def get_new_username():
 def greet_user():
     username = get_stored_username()
     if username:
-        print(f"Welcome back, {username}!")
+        check = input(f"Welcome back, {username}! Is it your name")
+        if check == 'n':
+           get_new_username()
+           print(get_stored_username())
+
     else:
         username = get_new_username()
         print(f"We'll remember you when you come back, {username}!")
