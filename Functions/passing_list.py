@@ -5,21 +5,25 @@
 #         print(username)
 #
 # print_usernames(usernames)
-
-messages = ["hello there", "how are u?", ":)"]
-sent_messages = []
-
-def show_messages(messages):
-    for message in messages:
-        print(message)
-
-def send_messages(messages, sent_messages):
-    while messages:
-        current_message = messages.pop()
-        sent_messages.append(current_message)
-    # return messages, sent_messages
-send_messages(messages[:], sent_messages)
-show_messages(messages)
-show_messages(sent_messages)
+#
+# messages = ["hello there", "how are u?", ":)"]
+# sent_messages = []
+#
+# def show_messages(messages):
+#     for message in messages:
+#         print(message)
+#
+# def send_messages(messages, sent_messages):
+#     while messages:
+#         current_message = messages.pop()
+#         sent_messages.append(current_message)
+#     # return messages, sent_messages
+# send_messages(messages[:], sent_messages)
+# show_messages(messages)
+# show_messages(sent_messages)
 
 #wsdsddssd
+def make_pizza(*toppings):
+    print(toppings)
+
+make_pizza('mushrooms', 'green peppers', 'extra cheese', 'check')

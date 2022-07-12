@@ -9,7 +9,7 @@ def occurrences_calculator(sources, word):
         except FileNotFoundError:
             pass
         else:
-            occurrences_counter += content.count(word)
+            occurrences_counter += content.lower().count(word)
     print(occurrences_counter)
 
 occurrences_calculator(books, 'magnificent')
