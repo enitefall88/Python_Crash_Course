@@ -6,3 +6,4 @@ with open('test_writing.txt') as file_object:
    print(file_object.read())
 
 
+#todo
