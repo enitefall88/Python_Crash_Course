@@ -6,6 +6,7 @@ class Employee:
 
     def give_raise(self, raise_ammount=5000):
         self.annual_salary += raise_ammount
+        return self.annual_salary
 
     def show_salary(self):
         print(self.annual_salary)
